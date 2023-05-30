@@ -1,0 +1,40 @@
+p {
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    
+    color: white;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+    
+}
+.Cima{
+    width: 1300px;
+    height: 160px ;
+    background-color: rgb(117, 117, 117);
+    margin-right: 30px;
+   
+}
+.boot{
+    width: 1300px;
+    height: 420px;
+   
+
+    
+}
+html{
+    background-color: rgb(49, 49, 49);
+}
+.B{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  
+}
+
+
+
+

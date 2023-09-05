@@ -1,0 +1,22 @@
+{
+  "name": "mongo",
+  "version": "1.0.0",
+  "description": "Primeito uso do mongose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZeDio/INW2MIA.git"
+  },
+  "author": "José Diogo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZeDio/INW2MIA/issues"
+  },
+  "homepage": "https://github.com/ZeDio/INW2MIA#readme",
+  "dependencies": {
+    "mongoose": "^7.5.0"
+  }
+}

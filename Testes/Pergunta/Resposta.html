@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Boto ou não Boto??</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #191919;
+    }
+    a{
+        text-decoration: none;
+        color: #191919;
+    }
+    p{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .box{
+        font-size: 20px;
+        color: #191919;
+        height: 250px;
+        width: 350px;
+        border-radius: 10px;
+        background: white;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .buttons-container{
+        display: flex;
+        justify-content: space-around;
+        height: 50px;
+        width: 150px;
+    }
+    button{
+        height: 30px;
+        width: 50px;
+        background: white;
+        border-radius: 5px;
+        color: #191919;
+        font-weight: 600;
+    }
+</style>
+<body>
+    
+    <div class="box">
+        <p>Quer Voltar??</p>
+        <div class="buttons-container">
+            <button>
+                <a href="../Pergunta/Pergunta.html">Sim</a>
+            </button>
+            <button id="no">Não</button>
+        </div>
+    </div>
+
+    <script>
+        let button = document.getElementById('no');
+        let height = window.innerHeight - 50;
+        let white = window.innerWidth - 50;
+        
+        button.addEventListener('mouseover', function(){
+            button.style.position = "absolute";
+            button.style.top = Math.random() * height + "px";
+            button.style.left = Math.random() * white + "px";
+        })
+    </script>
+</body>
+</html>

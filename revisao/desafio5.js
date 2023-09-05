@@ -1,0 +1,8 @@
+const leia = require("prompt-sync")()
+//Construa um progama em c que , tendo como dados de entrada dois pontos quaisquer no plano, P(x1,y1) e p(x2,y2), escreva a distância entre eles. A fórmula D=Raiz((x2-x1)²+(y2-y1)²)
+x1 = parseInt(leia("\n \n \n \n \n \n \n \n \n \n \n Digite o primeir numero: "))
+x2 = parseInt(leia("Digite o segundo numero: "))
+y1 = parseInt(leia("Digite o terceiro numero: "))
+y2 = parseInt(leia("Digite o quarto numero: "))
+D = Math.sqrt(Math.pow((x2-x1),2) + Math.pow((y2-y1),2))
+console.log("O resultado é: "+D)

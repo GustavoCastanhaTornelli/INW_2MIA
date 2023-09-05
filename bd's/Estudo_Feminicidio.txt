@@ -1,0 +1,22 @@
+José Diogo & Gustavo Castanha
+
+-- Estudo
+
+use Pesquisa
+db.createCollection("feminicido")
+
+
+// Primeiro vamos citar todos os casos de 2022
+db.feminicido.find({ANO_ESTATISTICA:'2022'}
+
+// Agora vamos citar os casos que foram em residência
+db.feminicidio.find({ DESC_TIPOLOCAL: 'Residência'})
+
+// Agora vamos citar os casos que foram em "Area não ocupada"
+db.feminicidio.find({ DESC_TIPOLOCAL: 'Area não ocupada'})
+
+// Agora vamos mostrar as pessoas que morreram maiores de 18 anos
+db.feminicidio.find({IDADE_PESSOA:{$gt: 18}}).pretty()
+
+// Agora vamos mostrar quantas pessoas que morreram sendo menores de 18 anos
+db.feminicidio.find({IDADE_PESSOA:{$it: 18}}).pretty()

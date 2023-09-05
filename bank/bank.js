@@ -51,7 +51,7 @@ class Conta{
 
 }
 
-class Poupanca extends Conta{
+class Poupanca extends Conta{ //José
     constructor(numero, cpf, saldo, ativa, diaAniversarioPoupanca){
         super(numero,cpf,saldo,ativa),
         this.diaAniversarioPoupanca = diaAniversarioPoupanca
@@ -67,7 +67,7 @@ class Poupanca extends Conta{
     }
 }
 
-class Corrente extends Conta{
+class Corrente extends Conta{ // Gustavo
     constructor(numero, cpf, saldo, ativa, contadorTalao){
         super(numero,cpf,saldo,ativa),
         this.contadorTalao = contadorTalao
@@ -95,6 +95,25 @@ class Corrente extends Conta{
     }
 }
 
+class Especial extends Conta{ //kauai
+    constructor(numero, cpf, saldo, ativa, contadorTalao, limite){
+    super(numero,cpf,saldo,ativa),
+    this.limiti = limiti
+    }
+
+    usarLimite(valor){
+        if(this.saldo>this.limite){
+            console.log("impossivel realizar, limite indisponivel....")
+        }
+        else{
+            this.limite = this.limite - saldo
+            this.credito(saldo)
+        }
+        console.log("Limite atual : "+this.limite)
+        console.log("Saldo atual conta R$ : "+this.saldo)
+        }
+}
+
 //Progama Final
 
 const leia = require("prompt-sync")()
@@ -105,6 +124,7 @@ console.log("Flor Do Din Din")
 console.log("Banco que rouba mais do que o da arminha e o do nove dedos :D \n")
 console.log("1 - Conta Poupança")
 console.log("2 - Conta Corrente ")
+console.log("3 - Conta Especial ")
 console.log("3 - Sair \n")
 tipo = leia("Digite o numero do tipo de conta a ser aberta: ")
 
@@ -167,6 +187,30 @@ else if(tipo=="2"){
             console.log("Saldo final da conta R$: "+cc.saldo+"\n")
         }
         console.log("\n Saldo final da conta R$: "+cc.saldo)
+          continuar = leia(console.log(" \n \n \n \n \n \n Deseja continuar com as operações na conta?? \n (Se sim digite S, se não digite N)"))
+    } while(continuar == "S")
+}
+
+else if(tipo=="3"){
+    do{
+        console.log("\n \n \n \n \nConta Especial")
+
+        let cs = new Corrente(numero,cpf,0,false, 1000)
+        cs.ativar()
+
+        for(let x=1; x<=10; x++){
+            console.log("\n \n Movimento "+x+"\n")
+            console.log("Saldo da conta R$: "+cs.saldo)
+            valor = parseInt(leia("Digite o valor: "))
+            op = leia("Digite D - débito ou C - crédito: ").toUpperCase()
+            if(op=="C"){
+                cs.credito(valor)
+            }
+            else if(op=="D"){
+                cs.debito(valor)
+            }
+        }
+        console.log("\n Saldo final da conta R$: "+cs.saldo)
           continuar = leia(console.log(" \n \n \n \n \n \n Deseja continuar com as operações na conta?? \n (Se sim digite S, se não digite N)"))
     } while(continuar == "S")
 }

@@ -1,0 +1,46 @@
+body{
+    font-family: "Montserrat";
+}
+#paginaAtual {
+    font-style: normal;
+    color: #B93939;
+}
+.bg-light{
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+p{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+footer li{
+    list-style-type: none;
+}
+footer a{
+    color: black;
+    text-decoration: none;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+}
+footer .text{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+footer li{
+    font-weight: 500;
+}
+footer h2{
+    font-weight: bolder;
+}

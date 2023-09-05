@@ -1,0 +1,86 @@
+José Diogo. Rm12195
+
+
+use GameStore
+
+db.createCollection("cliente")
+db.createCollection("produtosJogos")
+db.createCollection("movimento")
+
+show collections
+
+db.cliente.insertOne({
+_id: 1,
+nome: "CARLOS SILVA",
+cep: '02010-020',
+cpf: '111.222.333-44',
+idade: 18
+})
+
+db.cliente.insertMany([{
+_id: 2,
+nome: "José Diogo",
+cep: '02120-040',
+cpf: '122.211.344-43',
+idade: 16
+},{
+_id: 3,
+nome: "Gustavo Castanha",
+cep: '01512-050',
+cpf: '153.231.3244-13',
+idade: 15
+},{
+_id: 4,
+nome: "Antonio Di",
+cep: '04512-010',
+cpf: '157.234.324-44',
+idade: 12
+},{
+_id: 5,
+nome: "Mateus Almeida",
+cep: '02563-020',
+cpf: '178.234.384-99',
+idade: 18
+}])
+
+db.produtosJogos.insertMany([{
+_id: 1,
+nome: 'FIFA 13',
+descricao: 'O FIFA 13 captura o drama e a imprevisibilidade do futebol do mundo real.',
+lancamento: 2012,
+desenvolvedor: 'EA Vancouver'
+},{
+_id: 2,
+nome: 'Roblox',
+descricao: 'Roblox é uma plataforma de jogos MMOSG e Sandbox baseados normalmente em mundo aberto, multiplataforma e simulação que permite criar do zero seu próprio mundo virtual.',
+lancamento: 2006,
+desenvolvedor: 'Roblox Corporation'
+},{
+_id: 3,
+nome: 'FIFA 14',
+descricao: 'Roblox é uma plataforma de jogos MMOSG e Sandbox baseados normalmente em mundo aberto, multiplataforma e simulação que permite criar do zero seu próprio mundo virtual.',
+lancamento: 2013,
+desenvolvedor: 'EA Vancouver'
+},{
+_id: 4,
+nome: 'Sonic the Hedgehog',
+descricao: 'Sonic the Hedgehog é uma série de jogos e uma franquia multimídia japonesa criada pelo Sonic Team e produzida pela Sega.',
+lancamento: 1991,
+desenvolvedor: 'SEGA'
+},{
+_id: 5,
+nome: 'FIFA 18',
+descricao: 'FIFA 18 é um jogo eletrônico de futebol desenvolvido e publicado pela EA Sports, que foi lançado mundialmente em 1 de Novembro de 2017',
+lancamento: 2017,
+desenvolvedor: 'EA Sports'
+}])
+
+db.cliente.find()
+db.produtosJogos.find()
+
+db.cliente.updateOne({_id: 1}, {$set: {nome: "MARCOS PAULO"}})
+
+db.cliente.deleteOne({_id: 5})
+db.produtosJogos.deleteOne({_id: 5})
+
+db.movimento.drop()
